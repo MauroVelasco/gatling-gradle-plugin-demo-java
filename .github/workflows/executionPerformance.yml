@@ -38,14 +38,14 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: gatling report
-          path: ./build/reports/gatling
+          path: ./reports
 
       - name: "Publish Test Results"
         uses: peaceiris/actions-gh-pages@v3.7.3
         if: ${{ always() }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: './build/reports/gatling/gettest-20240722034402561'
+          publish_dir: './reports
           keep_files: true
           user_name: maurovelasco
           user_email: mauro.velasco@gmail.com
@@ -53,11 +53,11 @@ jobs:
 
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v2
+        uses: peaceiris/actions-gh-pages@v3.7.3
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh_page
-          PUBLISH_DIR: ./build/reports/gatling
+          PUBLISH_DIR: ./reports
 
 
 
