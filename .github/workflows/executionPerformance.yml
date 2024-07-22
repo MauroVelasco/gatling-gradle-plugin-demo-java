@@ -45,7 +45,7 @@ jobs:
         if: ${{ always() }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: './build/reports/gatling'
+          publish_dir: './build/reports/gatling/gettest-20240722034402561'
           keep_files: true
           user_name: maurovelasco
           user_email: mauro.velasco@gmail.com
