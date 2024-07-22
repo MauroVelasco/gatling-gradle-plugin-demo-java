@@ -45,7 +45,7 @@ jobs:
         if: ${{ always() }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: './reports
+          publish_dir: './reports'
           keep_files: true
           user_name: maurovelasco
           user_email: mauro.velasco@gmail.com
