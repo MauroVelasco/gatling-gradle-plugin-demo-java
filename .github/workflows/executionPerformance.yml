@@ -47,7 +47,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: './build/reports/gatling'
           keep_files: true
-          user_name: MauroVelasco
+          user_name: maurovelasco
           user_email: mauro.velasco@gmail.com
           publish_branch: gh_page
 
